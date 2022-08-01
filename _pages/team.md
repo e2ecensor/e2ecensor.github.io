@@ -71,7 +71,60 @@ horizontal: false
 	</div>
 	
 	<h2 class="category font-weight-normal">student</h2>
-	
+    <div class="grid">
+		<div class="grid-sizer"></div>
+		<div class="grid-item">
+			<!--a href="https://shhaos.github.io/"-->
+			<div class="card hoverable">
+				<div class="row no-gutters">
+					<div class="col-3">
+						{% include figure.html path="assets/img/user.png" class="img-fluid z-depth-1" %}
+					</div>
+					<div class="col-9">
+						<div class="card-body card-margin">
+						<h6 class="card-title"></h6>
+						<p class="card-text"></p>
+						</div>
+					</div>
+				</div>
+			</div>
+			
+		</div>
+		<div class="grid-item">
+			<!--a href="https://scholar.google.com/citations?user=tmOInzMAAAAJ&hl=en"-->
+			<div class="card hoverable">
+				<div class="row no-gutters">
+					<div class="col-3">
+						{% include figure.html path="assets/img/user.png" class="img-fluid z-depth-1" %}
+					</div>
+					<div class="col-9">
+						<div class="card-body card-margin">
+						<h6 class="card-title"></h6>
+						<p class="card-text"></p>
+					</div>
+					</div>
+				</div>
+				</div>
+				
+		</div>
+		<div class="grid-item">
+			<!--a href="https://www.ece.udel.edu/people/faculty/ccotton/"-->
+			<div class="card hoverable">
+				<div class="row no-gutters">
+					<div class="col-3">
+						{% include figure.html path="assets/img/user.png" class="img-fluid z-depth-1" %}
+					</div>
+					<div class="col-9">
+					<div class="card-body card-margin">
+						<h6 class="card-title"></h6>
+						<p class="card-text"></p>
+					</div>
+					</div>
+				</div>
+				</div>
+				
+		</div>
+	</div>
 	
 	<h2 class="category font-weight-normal">contact</h2>
     <div class="social">
