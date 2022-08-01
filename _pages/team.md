@@ -26,11 +26,6 @@ horizontal: false
 						</div>
 					</div>
 				</div>
-					
-				<!--div class="card-body">
-						<h6 class="card-title">Shuai Hao</h6>
-						<p class="card-text">Assistant Professor<br>Dept. of Computer Science<br>Old Dominion University<br>Norfolk, VA</p>
-				</div-->
 			</div>
 			</a>
 		</div>
@@ -71,7 +66,54 @@ horizontal: false
 	</div>
 	
 	<h2 class="category font-weight-normal">student</h2>
-	
+    <div class="grid">
+		<div class="grid-sizer"></div>
+		<div class="grid-item">
+			<a href="">
+			<div class="card hoverable">
+				<div class="row no-gutters">
+					<div class="col-3">
+				        {% include figure.html path="assets/img/user.png" class="img-fluid z-depth-1" %}
+					</div>
+					<div class="col-9">
+						<div class="card-body card-margin">
+						</div>
+					</div>
+				</div>
+			</div>
+			</a>
+		</div>
+		<div class="grid-item">
+			<a href="">
+			<div class="card hoverable">
+				<div class="row no-gutters">
+					<div class="col-3">
+				        {% include figure.html path="assets/img/user.png" class="img-fluid z-depth-1" %}
+					</div>
+					<div class="col-9">
+						<div class="card-body card-margin">
+					</div>
+					</div>
+				</div>
+				</div>
+			</a>
+		</div>
+		<div class="grid-item">
+			<a href="">
+			<div class="card hoverable">
+				<div class="row no-gutters">
+					<div class="col-3">
+				        {% include figure.html path="assets/img/user.png" class="img-fluid z-depth-1" %}
+					</div>
+					<div class="col-9">
+					<div class="card-body card-margin">
+					</div>
+					</div>
+				</div>
+				</div>
+			</a>
+		</div>
+	</div>
 	
 	<h2 class="category font-weight-normal">contact</h2>
     <div class="social">
