@@ -6,7 +6,7 @@ layout: default
       <div class="post">
         <header class="post-header">
           <h1 class="post-title">
-           {% if site.title == "blank" -%}<span class="font-weight-bold">{{ site.first_name }}</span> {{ site.middle_name }} {{ site.last_name }}{%- else -%}{{ site.title }}{%- endif %}
+           {% if site.title == "blank" -%}<span class="font-weight-bold">{{ site.first_name }}</span> - {{ site.middle_name }} {{ site.last_name }}{%- else -%}{{ site.title }}{%- endif %}
           </h1>
           <p class="desc">{{ page.subtitle }}</p>
         </header>
@@ -54,13 +54,48 @@ layout: default
             <div class="contact-icons">
             {% include social.html %}
             </div>
-
-            <div class="contact-note">
+            <div class="contact-note font-weight-normal">
               {{ site.contact_note }}
             </div>
-            
           </div>
           {%- endif %}
+		  
+		  <div class="social">
+              <div class="contact-icons">
+  				<div class="row no-gutters justify-content-md-center">
+  					<div class="col col-lg-2">
+  				        <a href="https://odu.edu/" title="ODU"><img style="height:48px;" class="img-rounded" src="assets/img/odu-logo.png"></a>
+  					</div>
+  					<div class="col col-md-auto">
+  						<a href="https://vt.edu/" title="VT"><img style="height:45px;" class="img-rounded" src="assets/img/vt-logo.png"></a>
+  					</div>
+  					<div class="col col-lg-2">
+  						<a href="https://www.udel.edu/" title="UD"><img style="height:42px;" class="img-rounded" src="assets/img/ud-logo.png"></a>
+  					</div>
+  				</div>
+              </div>
+              <div class="contact-note">
+                This project is conducted by the research team from Old Dominion University, Virginia Tech, and University of Delaware.
+              </div>
+		  </div>
         </article>
 
 </div>
+
+	<!-- Default Statcounter code for Disguiser Project Website
+	https://e2ecensor.github.io/ -->
+	<script type="text/javascript">
+	var sc_project=12759864; 
+	var sc_invisible=1; 
+	var sc_security="6d323bd1"; 
+	</script>
+	<script type="text/javascript"
+	src="https://www.statcounter.com/counter/counter.js"
+	async></script>
+	<noscript><div class="statcounter"><a title="Web Analytics"
+	href="https://statcounter.com/" target="_blank"><img
+	class="statcounter"
+	src="https://c.statcounter.com/12759864/0/6d323bd1/1/"
+	alt="Web Analytics"
+	referrerPolicy="no-referrer-when-downgrade"></a></div></noscript>
+	<!-- End of Statcounter Code -->

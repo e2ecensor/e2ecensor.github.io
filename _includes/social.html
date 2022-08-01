@@ -1,6 +1,6 @@
-            {%- if site.email -%}
-            <a href="mailto:{{ site.email | encode_email }}" title="email"><i class="fas fa-envelope"></i></a>
-            {% endif %}
+            <!--{%- if site.email -%}
+            <a href="mailto:{{ site.email | encode_email }}" title="email"><i class="fas fa-envelope"></i></a><br>
+            {% endif %}-->
             {%- if site.orcid_id -%}
             <a href="https://orcid.org/{{ site.orcid_id }}" title="ORCID"><i class="ai ai-orcid"></i></a>
             {% endif %}
@@ -52,6 +52,9 @@
             {%- if site.stackoverflow_id -%}
             <a href="https://stackoverflow.com/users/{{ site.stackoverflow_id }}" title="Stackoverflow"><i class="fab fa-stack-overflow"></i></a>
             {% endif %}
-            {%- if site.rss_icon -%}
+            <!--{%- if site.rss_icon -%}
             <a href="{{ site.baseurl }}/feed.xml" title="RSS Feed"><i class="fas fa-rss-square"></i></a>
+            {% endif %} -->
+            {%- if site.fund -%}
+            <a href="https://www.opentech.fund/" title="OTF"><img style="height:50px;" class="img-rounded" src="assets/img/otf-logo.png"></a>
             {% endif %}

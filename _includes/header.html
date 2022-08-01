@@ -8,14 +8,15 @@
           <a class="navbar-brand title font-weight-lighter" href="{{ site.baseurl }}/">
             {%- if site.title == "blank" -%}
               {%- if site.first_name -%}
-                <span class="font-weight-bold">{{- site.first_name -}}&nbsp;</span>
+                <!--span class="font-weight-bold">{{- site.first_name -}}&nbsp;</span-->
+				{{- site.first_name -}}
               {%- endif -%}
-              {%- if site.middle_name -%}
+              <!--{%- if site.middle_name -%}
                 {{- site.middle_name -}}&nbsp;
               {%- endif -%}
               {%- if site.last_name -%}
                 {{- site.last_name -}}
-              {%- endif -%}
+              {%- endif -%} -->
             {%- else -%}
               {{- site.title -}}
             {%- endif -%}
@@ -78,7 +79,7 @@
                   {%- if child.title == 'divider' %}
                   <div class="dropdown-divider"></div>
                   {%- else %}
-                  <a class="dropdown-item" href="{{ child.permalink | relative_url }}">{{ child.title }}</a>
+                  <a class="dropdown-item font-weight-normal" href="{{ child.permalink | relative_url }}">{{ child.title }}</a>
                   {%- endif -%}
                   {% endfor %}
                 </div>

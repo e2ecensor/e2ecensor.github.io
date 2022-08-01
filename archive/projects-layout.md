@@ -1,13 +1,14 @@
 ---
 layout: page
-title: projects
-permalink: /projects/
-description: A growing collection of your cool projects.
-nav: true
-nav_order: 2
-display_categories: [work, fun]
+title: knowledge base
+ # permalink: /projects/
+description: A collection of technical background of Internet censorship.
+ # nav: true
+nav_order: 6
 horizontal: false
 ---
+
+TO BE UPDATED
 
 <!-- pages/projects.md -->
 <div class="projects">
