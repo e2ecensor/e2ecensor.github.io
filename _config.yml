@@ -83,7 +83,7 @@ stackoverflow_id: #your stackoverflow id
 fund: OTF
 
 contact_note: >
-  This project is Funded by Open Technolody Fund (OTF) under an Internet Freedom Fund.
+  This <a href="https://www.opentech.fund/results/supported-projects/measuring-censorship-with-accuracy-of-ground-truth/">project</a> is Funded by Open Technolody Fund (OTF) under an Internet Freedom Fund.
 
 # -----------------------------------------------------------------------------
 # Analytics and search engine verification
