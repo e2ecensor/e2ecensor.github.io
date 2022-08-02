@@ -15,24 +15,24 @@ The detail of the framework and a comprehensive measurement study on global cens
 
 ---
 
-### Problem Statement
+### problem Statement
 
 TO BE UPDATED
 
 ---
 
-### Framework design
+### framework design
 
 TO BE UPDATED
 
 ---
 
-### Extensive measurements
+### extensive measurements
 
 TO BE UPDATED
 
 ---
 
-### Other specific research problems
+### other specific research problems
 
 TO BE UPDATED
