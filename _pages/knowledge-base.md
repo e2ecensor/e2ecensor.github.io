@@ -14,20 +14,20 @@ Internet censorship controls what can be viewed by a certain group of Internet u
 ##### Application-Layer Censorship
 Domain names and IP addresses are the most straightforward and useful information for censors to monitor. As CDNs have been widely adopted where the IP addresses are typically shared with many legitimate services, the IP-based blocking may cause significant collateral damage. On the other hand, the domain name blocking enables the censors to accurately block their undesired Internet services. Here, we briefly describe the application-level censorship that blocks domain names. Then, we present how a censor could be deployed and monitor the traffic.
 
-*DNS Blocking*. When visiting a website, a client first resolves its domain name to obtain the
+*DNS Blocking*: When visiting a website, a client first resolves its domain name to obtain the
 network address by using DNS. Since DNS was originally designed as an unencrypted protocol, the
 censors on the network paths are able to manipulate the DNS responses or drop the DNS queries.
 Although UDP-based DNS is mostly adopted, TCP-based DNS is also inherently supported. For a
 TCP-based DNS request, a censor may tear down the connection with RST/FIN packets.
 
-*Domain Names Blocking in HTTP*. The HTTP Host header presents the domain name a client
+*Domain Names Blocking in HTTP*: The HTTP Host header presents the domain name a client
 is visiting, specifying the target service since a web server may host multiple domains. Still, the
 HTTP protocol is unencrypted and the censors can know exactly the requested domain. To block
 an HTTP connection if needed, a censor may inject a blockpage indicating that the domain is
 prohibited, tear down the connection with RST/FIN packets, or directly drop the request without
 any notification.
 
-*Domain Names Blocking in HTTPS*. HTTPS encrypts all the HTTP packets after a TLS
+*Domain Names Blocking in HTTPS*: HTTPS encrypts all the HTTP packets after a TLS
 handshake so that the Host header is no longer visible to the censors. However, it is common that a web server hosts multiple domains, and each domain is associated with an independent certificate. Therefore, in order to present the correct certificate to a client before the ephemeral keys are exchanged, an SNI extension is required to be included in the Client Hello message to indicate which domain the client intends to visit. As a result, the domain name in the SNI extension is sent in plaintext and is visible to the censors. As such, to block an HTTPS connection, a censor may tear down the connection with RST/FIN packets, directly drop the packet, or inject an incorrect, forged certificate to intercept the connection.
 
 ##### On-path and In-path Censors
@@ -46,9 +46,9 @@ In order to examine network traffic, censorship devices can be deployed in two d
 
 *Arian Akhavan Niaki, Shinyoung Cho, Zachary Weinberg, Nguyen Phong Hoang, Abbas Razaghpanah, Nicolas Christin, Phillipa Gill. in IEEE Symposium on Security and Privacy (S&P), 2020.*
 
-The ultimate goal of ICLab is to propose a global, comprehensive, longitudinal censorship measurement platform. Internet censorship detection has been limited within a period of time and in a few countries in the previous studies. The paper present a novel internet measurement platform, ICLab which is capable of achieving mutual benefits between breadth of coverage and detail of measurement. Moreover, they adopt commercial Virtual Private Network servers (VPNs) as the vantage points to launch censorship measurements, such as DNS manipulation, TCP packet injection, and "block page" redirection. The design of ICLab seeks to minimize false positives and manual effort in the process of validation. 
+The goal of ICLab is to develop a global, comprehensive, longitudinal censorship measurement platform, achieving mutual benefits between coverage and details of measurements. Moreover, ICLab adopts commercial Virtual Private Network servers (VPNs) as the vantage points to launch censorship measurements, including DNS manipulation, TCP packet injection, and block page redirection. The design of ICLab seeks to minimize false positives and manual effort in the process of validation. 
 
-As commercial VPNs serve as vantage points within the Internet measurement, this will tackle the ethnic issue of requesting sensitive content online from politically restricted regions. ICLab engages in monitoring and providing detailed data collection from all levels of the network stacks. Also, ICLab applies volunteer-operated devices (VODs) in a few locations as alternative options for vantage points. Moreover, ICLab has high capabilities to implement new measurements when new censorship techniques come out, update the URLs when needed, and re-analyze old data when applicable. The researchers collect and archive massive observations in detail through ICLab which enables them to compare the blocking techniques deployed in different regions against different types of content. The essential observation of this longitudinal measurement is that censorship consistency has changed concurrently with the political shifts. What’s more, unknown block pages and unknown forms of network interference have been detected via ICLab. 
+As commercial VPNs serve as vantage points within the Internet measurement, this will reduce ethical concern of requesting sensitive content online from politically restricted regions. ICLab engages in monitoring and providing detailed data collection from all levels of the network stacks. Also, ICLab applies volunteer-operated devices (VODs) in a few locations as alternative options for vantage points. Moreover, ICLab has high capabilities to implement new measurements when new censorship techniques come out, update the URLs when needed, and re-analyze old data when applicable. The researchers collect and archive massive observations in detail through ICLab which enables them to compare the blocking techniques deployed in different regions against different types of content. The essential observation of this longitudinal measurement is that censorship consistency has changed concurrently with the political shifts. What’s more, unknown block pages and unknown forms of network interference have been detected via ICLab. 
 
 ICLab currently is focusing on website accessibility, each time the researchers only test the Alexa top 500, all of the citizen lab’s global list of sensitive websites and country specific list. Moreover, the paper displays the packet traces and mimics browser behavior as closely as the manual effort could manage to reveal what happens on the network level and application-level when a website gets censored. Finally, the researchers end up with commercial VPN as vantage points other than volunteers for the consideration of storage capacity and bandit back with consumption. It avoids the practical and ethical problems with remote volunteer work, but it means that they can only access about 60 countries by commercial VPN. There is another critical problem with commercial VPNs that they often lie about the physical locations of their servers.
 
