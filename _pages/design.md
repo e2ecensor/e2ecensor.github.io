@@ -20,8 +20,7 @@ The detail of the framework and a comprehensive measurement study on global cens
 ### framework design
 
 The framework of our proposed system design is illustrated in the Figure. The high-level idea is that a client instructs the vantage points to (1) craft DNS/HTTP/HTTPS requests with the test domain names embedded, (2) send the packets to our control server to trigger censorship, and (3) collect the response back for analysis. Our control server replies to arbitrary requests with a static payload for each type of protocol. Note that we do not send any requests to legitimate servers, and the accessed domains in the requests (if being censored) would still trigger the censorship since the censor devices will see the undesired domains but have no knowledge of whether the destination IP address is associated with a legitimate server of the censored domain. In the end, this provides us a baseline by controlling what should be expected at the client side when no censorship is involved so as to accurately recognize the censorship activities.
-
-![Disguiser Design](/assets/img/disguiser_hz.png "Disguiser")
+<img src="/assets/img/disguiser_hz.png" alt="Disguiser Design" style="max-width: 100%"/>
 
 ---
 
@@ -33,5 +32,5 @@ TO BE UPDATED
 
 ### other specific research problems
 
-#### Exploring the Censorship of Encrypted DNS
+##### ***Exploring the Censorship of Encrypted DNS***
 We leverage the framework to explore and evaluate the effectiveness of adopting the emerging encrypted DNS (i.e., DoT and/or DoH) for circumventing censorship. The basic idea is to identify the vantage points (e.g., VPN servers) that suffer manipulation by encrypted DNS, from which perform DNS resolution on the censored domains via DoT/DoH resolvers, and then attempt to visit those domains for assessing the accessibility. We issue the DNS requests from the vantage points via DoT/DoH resolver to our control server that replies arbitrary DNS requests with a static DNS response. If a DNS request triggers an on-path censor, our vantage point will receive a manipulated DNS response that will be different from the static DNS response provided by the control server. In addition, we design and perform a circumvention test with those censored domains to investigate the effectiveness of the use of encrypted DNS. We consider that an encrypted DNS resolver can be used to circumvent censorship if the vantage point can retrieve legitimate web content from the censored domain. The detail study can be found in our WWW'21 <a href="/assets/pdf/www21.pdf">paper</a>.
