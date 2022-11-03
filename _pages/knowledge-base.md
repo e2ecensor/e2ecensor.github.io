@@ -38,8 +38,7 @@ In order to examine network traffic, censorship devices can be deployed in two d
 
 ##### OONI: Open Observatory of Network Interference
 
-##### Iris: Global Measurement of DNS Manipulation
-*Paul Pearce, Ben Jones, Frank Li, Roya Ensafi, Nick Feamster, Nick Weaver, Vern Paxson. in USENIX Security Symposium, 2017.*
+[OONI](https://ooni.org/) recruits volunteers to install software and manually run pre-defined censorship measurements.
 
 ##### ICLab: A Global, Longitudinal Internet Censorship Measurement Platform
 
@@ -76,6 +75,9 @@ The FilterMap first gathers blockpages based on filter development when performi
 This study can be evaluated from the following two intervals: Data Collection and Data Analysis. For Data Collection, the measurements for massive domains on all HTTP(S) and Echo servers consume less time by sending requests in parallel. For Data analysis, FilterMap adopts iterative classification which outperforms the other collection methods by identifying 82 blockpages.
 
 This paper has shown the most recent complete view on the deployment of censorship filters which respond with blockpages. In future research, one direction is to focus on other types of filter responses to identify filters such as the certificate returned in HTTPS measurements to further extract signatures and discover filters. FilterMap’s analysis techniques have a profound impact on eliminating false positives and reducing noise in the same sort of research. Moreover, FilterMap’s measurements inspire circumvention tool developers to develop circumvention strategies based on empirical experience. The longitudinal data collected about filter deployment can help regulate the utilization of filter technology and its illegal proliferation.
+
+##### Iris: Global Measurement of DNS Manipulation
+*Paul Pearce, Ben Jones, Frank Li, Roya Ensafi, Nick Feamster, Nick Weaver, Vern Paxson. in USENIX Security Symposium, 2017.*
 
 ---
 ### Disguiser and Comparison
