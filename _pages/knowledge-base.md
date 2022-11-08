@@ -37,10 +37,8 @@ In order to examine network traffic, censorship devices can be deployed in two d
 ### State-of-the-art and Significant Research
 
 ##### OONI: Open Observatory of Network Interference
-[OONI](https://ooni.org/) 
 
-##### Iris: Global Measurement of DNS Manipulation
-*Paul Pearce, Ben Jones, Frank Li, Roya Ensafi, Nick Feamster, Nick Weaver, Vern Paxson. in USENIX Security Symposium, 2017.*
+[OONI](https://ooni.org/) recruits volunteers to install software and manually run pre-defined censorship measurements.
 
 ##### ICLab: A Global, Longitudinal Internet Censorship Measurement Platform
 
@@ -78,5 +76,20 @@ This study can be evaluated from the following two intervals: Data Collection an
 
 This paper has shown the most recent complete view on the deployment of censorship filters which respond with blockpages. In future research, one direction is to focus on other types of filter responses to identify filters such as the certificate returned in HTTPS measurements to further extract signatures and discover filters. FilterMap’s analysis techniques have a profound impact on eliminating false positives and reducing noise in the same sort of research. Moreover, FilterMap’s measurements inspire circumvention tool developers to develop circumvention strategies based on empirical experience. The longitudinal data collected about filter deployment can help regulate the utilization of filter technology and its illegal proliferation.
 
+##### Iris: Global Measurement of DNS Manipulation
+*Paul Pearce, Ben Jones, Frank Li, Roya Ensafi, Nick Feamster, Nick Weaver, Vern Paxson. in USENIX Security Symposium, 2017.*
+
 ---
 ### Disguiser and Comparison
+
+[OONI](https://ooni.org/) recruits volunteers to install software and manually run pre-defined censorship measurements. In comparison, Disguiser and other studies adopt a remote measurement technique, i.e., conducting measurements remotely using the existing network protocols and infrastructures.
+
+Quack leverages the Echo service that reflects back the packets sent to it to trigger censors. However, as Echo servers operate on port 7 and the Quack client runs on ephemeral ports, Quack does not generate HTTP/HTTPS traffic on their standard ports, so that it may generate false negatives when a censor only monitors traffic on standard ports. In order to compare with Quack, we operated HTTP/HTTPS on non-standard ports (including port 7 and other random ports) at our control server and issued HTTP/HTTPS requests through vantage points to our control server on these non-standard ports. Meanwhile, from the same vantage point, we conducted our standard tests, i.e., sending HTTP/HTTPS on standard ports to our control server. In the comparison experiment lasting for one week, in total, we identified censors in 32 countries that ignore the requests sent to non-standard ports but block the requests to standard ports. More importantly, many of those censors enforce severe censorship policies, including the ones in Saudi Arabia, UAE, Ukraine, Russia, India, South Korea, Pakistan, Kuwait, and Thailand. As a result, our observation shows that issuing legitimate traffic is critical to accurately detecting censorship activities.
+
+ICLab relies on VPNs to measure censorship activities. However, VPNs are usually deployed at countries that do not enforce strict censorship policies. As a result, ICLab has a limited coverage (62 countries, less than half of our covered countries), and according to the paper, ICLab cannot observe very important activities, such as severe DNS manipulation in China, which are detected by us and previous studies. Moreover, ICLab requires conducting manual review to
+identify and reduce false positives and false negatives are still unidentifiable.
+
+#### Accuracy
+In our [paper](https://shhaos.github.io/papers/sigmetrics22.pdf) we also examine the claimed accuracy for those studies and present comparison shown below.
+
+<img src="/assets/img/disguiser_compare.png" alt="Disguiser Design" style="max-width: 85%"/>
